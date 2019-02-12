@@ -4,8 +4,6 @@ var admin = require('firebase-admin');
 const app = express();
 app.use(cors());
 
-console.log(process.env.PRIVATE_KEY);
-
 admin.initializeApp({
     credential: admin.credential.cert({
         type: process.env.TYPE,
