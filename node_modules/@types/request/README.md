@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/request`
+
+# Summary
+This package contains type definitions for request (https://github.com/request/request).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/request
+
+Additional Details
+ * Last updated: Mon, 05 Nov 2018 06:48:31 GMT
+ * Dependencies: caseless, form-data, tough-cookie, node
+ * Global values: none
+
+# Credits
+These definitions were written by Carlos Ballesteros Velasco <https://github.com/soywiz>, bonnici <https://github.com/bonnici>, Bart van der Schoor <https://github.com/Bartvds>, Joe Skeen <https://github.com/joeskeen>, Christopher Currens <https://github.com/ccurrens>, Jon Stevens <https://github.com/lookfirst>, Matt R. Wilson <https://github.com/mastermatt>, Jose Colella <https://github.com/josecolella>, Marek Urbanowicz <https://github.com/murbanowicz>.
