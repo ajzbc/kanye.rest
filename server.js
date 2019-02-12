@@ -2,7 +2,7 @@ const express = require('express');
 var admin = require('firebase-admin');
 const app = express();
 
-console.log(process.env.PROJECT_ID);
+console.log(process.env.PRIVATE_KEY);
 
 admin.initializeApp({
     credential: admin.credential.cert({
