@@ -1,6 +1,8 @@
 const express = require('express');
+var cors = require('cors');
 var admin = require('firebase-admin');
 const app = express();
+app.use(cors());
 
 console.log(process.env.PRIVATE_KEY);
 
