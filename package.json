@@ -1,0 +1,30 @@
+{
+  "name": "kanye.rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase-admin": "^7.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajzbc/kanye.rest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajzbc/kanye.rest/issues"
+  },
+  "homepage": "https://github.com/ajzbc/kanye.rest#readme",
+  "engines": {
+    "node": "10.4.0"
+  }
+}
