@@ -4,10 +4,64 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>kanye.rest</title>
+    <meta content="description" name="kanye.rest - a free json api for random kanye west quotes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAXH9Wz3DMgn1dLbdXnb-jry2skrA9AeHk",
+        authDomain: "kanyerestapi.firebaseapp.com",
+        databaseURL: "https://kanyerestapi.firebaseio.com",
+        projectId: "kanyerestapi",
+        storageBucket: "kanyerestapi.appspot.com",
+        messagingSenderId: "232778748525"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <script src="countUp.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
-    <h1 id="quote">quote</h1>
+    <div class="wrap">
+        <header>
+            <h1><a class="title" href="#">kanye.rest</a></h1>
+            <p class="description">a free json api for random kanye west quotes</p>
+        </header>
+        <section>
+            <h1>Usage</h1>
+            <pre>
+                <code>
+                    GET
+                    <a class="getLink" title="get a random kanye west quote" href="https://api.kanye.rest">https://api.kanye.rest</a>
+                    <button class="copyButton" onclick="copy()" title="Copy">Copy</button>
+                </code>
+                <hr>
+                <code class="response">
+                        {
+                        <div class="tab">"quote" : "<span id="quote"></span>"</div>
+                        }
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h1>Suggest a quote</h1>
+            <div class="suggestion">
+                <input type="text" name="quote" id="newQuote" placeholder="Quote">
+                <input type="text" name="proof" id="newProof" placeholder="Proof">
+                <button class="submitButton" onclick="submitSuggestion()" title="Submit">Submit</button>
+            </div>
+        </section>
+        <footer>
+            <p>Total API Calls: <b id="apiCalls"></b></p>
+            <a class="footerButton" href="https://github.com/ajzbc/kanye.rest">github</a>
+            <a class="footerButton" href="https://ajzbc.com">ajzbc</a>
+        </footer>
+    </div>
 </body>
 </html>
