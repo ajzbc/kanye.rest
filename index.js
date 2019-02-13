@@ -6,6 +6,7 @@ fetch(url).then(response => {
 }).then(data => {
     //populate code with quote from api call
     document.getElementById("quote").innerHTML = data.quote;
+    console.log(data.id);
     document.getElementById("id").innerHTML = data.id;
 }).catch(err => {
     console.log(err);
