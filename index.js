@@ -1,5 +1,5 @@
 //api url
-var url = 'https://apikanyerest.herokuapp.com'
+var url = 'https://api.kanye.rest'
 //call api
 fetch(url).then(response => {
     return response.json();
