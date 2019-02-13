@@ -27,7 +27,6 @@ var publicStats = db.collection('stats').doc('public');
 
 app.get('/', function (req, res) {
     var key = quotes.doc().id;
-    console.log(key);
 
     var quote = quotes.where(admin.firestore.FieldPath.documentId(), '>', key).limit(1).get()
     .then(snapshot => {
