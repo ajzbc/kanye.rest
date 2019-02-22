@@ -65,6 +65,8 @@ function submitSuggestion() {
             proof: newProof
         })
         .then(function(docRef) {
+            document.getElementById("newQuote").value = "";
+            document.getElementById("newProof").value = "";
             alert("submitted for review");
             //console.log("Document written with ID: ", docRef.id);
         })

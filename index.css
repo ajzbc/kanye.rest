@@ -12,8 +12,12 @@ body {
 
 header {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+img {
+    margin-bottom: -10px;
 }
 
 .title, .title:visited{
@@ -21,6 +25,7 @@ header {
     color: #000;
 }
 .description {
+    margin-top: -10px;
     font-size: 18px;
     font-weight: 600;
     color: #000;
