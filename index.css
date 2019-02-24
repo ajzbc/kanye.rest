@@ -57,6 +57,7 @@ pre, .suggestion {
     border-radius: 5px;
     padding: 3px;
     margin-left: 10px;
+    text-decoration: none;
 }
 .codeButton:hover {
     background-color: #000;

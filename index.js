@@ -10,6 +10,10 @@ function get() {
         //populate code with quote from api call
         document.getElementById("quote").innerHTML = data.quote;
         document.getElementById("id").innerHTML = data.id;
+
+        //tweet
+        var tweet = encodeURIComponent('"' + data.quote + '" -Kanye via https://kanye.rest');
+        document.getElementById("tweet").href = "https://twitter.com/intent/tweet?text=" + tweet;
     }).catch(err => {
         console.log(err);
     });
