@@ -50,12 +50,14 @@ pre, .suggestion {
 
 .codeButton {
     color: #000;
+    background-color: #fff;
     font-family: monospace;
     font-size: 15px;
     float: right;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 3px;
+    margin: 0px;
     margin-left: 10px;
     text-decoration: none;
 }
@@ -88,6 +90,7 @@ input {
 
 .submitButton {
     color: #000;
+    background-color: #fff;
     font-family: monospace;
     font-size: 18px;
     border: 1px solid #000;
@@ -108,6 +111,7 @@ footer {
 
 .footerButton {
     color: #000;
+    background-color: #fff;
     font-family: monospace;
     font-size: 18px;
     border: 1px solid #000;
