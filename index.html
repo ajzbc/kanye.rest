@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134041866-2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
@@ -27,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -51,13 +52,13 @@
     <meta name="twitter:description" content="A free json api for random kanye west quotes">
     <meta name="twitter:image" content="https://kanye.rest/images/logo.png">
 
-    <link rel="canonical" href="/"/>
+    <link rel="canonical" href="/" />
 
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
     <script>
-    // Initialize Firebase
+        // Initialize Firebase
     var config = {
         apiKey: "AIzaSyAXH9Wz3DMgn1dLbdXnb-jry2skrA9AeHk",
         authDomain: "kanyerestapi.firebaseapp.com",
@@ -72,6 +73,7 @@
     <script src="countUp.js"></script>
     <script src="index.js"></script>
 </head>
+
 <body>
     <div class="wrap">
         <header>
@@ -81,7 +83,8 @@
             </a>
             <p class="description">a free json api for random kanye west quotes</p>
 
-            <iframe src="https://ghbtns.com/github-btn.html?user=ajzbc&repo=kanye.rest&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=ajzbc&repo=kanye.rest&type=star&count=true&size=large"
+                frameborder="0" scrolling="0" width="120px" height="30px"></iframe>
 
         </header>
         <section>
@@ -103,6 +106,14 @@
                 </code>
             </pre>
         </section>
+
+        <section>
+            <div id="codefund">
+                <!-- fallback content -->
+            </div>
+            <script src="https://codefund.app/properties/192/funder.js" async="async"></script>
+        </section>
+
         <section>
             <h1>Extra</h1>
             <pre>
@@ -124,11 +135,13 @@
         </section>
         <footer>
             <p>Total API Calls: <b id="apiCalls"></b></p>
-            <a class="footerButton" href="https://buymeacoff.ee/ajzbc">Buy Me A Coffee</a>
+            <!-- removed and replaced with small ethical ad -->
+            <!-- <a class="footerButton" href="https://buymeacoff.ee/ajzbc">Buy Me A Coffee</a> -->
             <a class="footerButton" href="https://github.com/ajzbc/kanye.rest/issues">Feedback</a>
             <a class="footerButton" href="https://github.com/ajzbc/kanye.rest">GitHub</a>
             <a class="footerButton" href="https://ajzbc.com">Andrew Jazbec</a>
         </footer>
     </div>
 </body>
+
 </html>

@@ -1,6 +1,8 @@
 body {
-    font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    background-color: #f8f8f8;
 }
+
 .wrap {
     margin: 0 auto;
     margin-top: 0px;
@@ -20,10 +22,12 @@ img {
     margin-bottom: -10px;
 }
 
-.title, .title:visited{
+.title,
+.title:visited {
     text-decoration: none;
     color: #000;
 }
+
 .description {
     margin-top: -10px;
     font-size: 18px;
@@ -35,7 +39,8 @@ section {
     margin-bottom: 25px;
 }
 
-pre, .suggestion {
+pre,
+.suggestion {
     border: 1px solid #000;
     border-radius: 10px;
     display: block;
@@ -44,13 +49,14 @@ pre, .suggestion {
     padding: 1em;
     white-space: normal;
 }
-.getLink{
+
+.getLink {
     color: #000
 }
 
 .codeButton {
     color: #000;
-    background-color: #fff;
+    background-color: #f8f8f8;
     font-family: monospace;
     font-size: 15px;
     float: right;
@@ -61,9 +67,10 @@ pre, .suggestion {
     margin-left: 10px;
     text-decoration: none;
 }
+
 .codeButton:hover {
     background-color: #000;
-    color: #fff;
+    color: #f8f8f8;
 }
 
 hr {
@@ -71,7 +78,8 @@ hr {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.tab{
+
+.tab {
     margin-left: 20px;
 }
 
@@ -79,6 +87,7 @@ input {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     color: #000;
+    background-color: #f8f8f8;
     width: 98%;
     padding: 5px;
     border-top: 0px;
@@ -90,16 +99,17 @@ input {
 
 .submitButton {
     color: #000;
-    background-color: #fff;
+    background-color: #f8f8f8;
     font-family: monospace;
     font-size: 18px;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 5px;
 }
+
 .submitButton:hover {
     background-color: #000;
-    color: #fff;
+    color: #f8f8f8;
 }
 
 footer {
@@ -111,7 +121,7 @@ footer {
 
 .footerButton {
     color: #000;
-    background-color: #fff;
+    background-color: #f8f8f8;
     font-family: monospace;
     font-size: 18px;
     border: 1px solid #000;
@@ -119,7 +129,8 @@ footer {
     padding: 5px;
     text-decoration: none;
 }
+
 .footerButton:hover {
     background-color: #000;
-    color: #fff;
+    color: #f8f8f8;
 }
