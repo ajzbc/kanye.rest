@@ -18,7 +18,7 @@ admin.initializeApp({
         client_x509_cert_url: process.env.CLIENT_X509_CERT_URL
     }),
     databaseURL: process.env.DATABASEURL
-  });
+});
 
 var db = admin.firestore();
 
@@ -29,47 +29,54 @@ app.get('/', function (req, res) {
     var key = quotes.doc().id;
 
     var quote = quotes.where(admin.firestore.FieldPath.documentId(), '>', key).limit(1).get()
-    .then(snapshot => {
-        if(snapshot.size > 0) {
-            snapshot.forEach(doc => {
-                console.log(doc.id, '=>', doc.data());
-                res.send({ quote: doc.data().quote, id: doc.id});
-                incrementAPICalls();
-            });
-        }
-        else {
-            var quote = quotes.where(admin.firestore.FieldPath.documentId(), '<', key).limit(1).get()
-            .then(snapshot => {
+        .then(snapshot => {
+            if (snapshot.size > 0) {
                 snapshot.forEach(doc => {
                     console.log(doc.id, '=>', doc.data());
-                    res.send({ quote: doc.data().quote, id: doc.id});
+                    res.send({
+                        quote: doc.data().quote,
+                        id: doc.id
+                    });
                     incrementAPICalls();
                 });
-            })
-            .catch(err => {
-                console.log('Error getting documents', err);
-            });
-        }
-    })
-    .catch(err => {
-        console.log('Error getting documents', err);
-    });
+            } else {
+                var quote = quotes.where(admin.firestore.FieldPath.documentId(), '<', key).limit(1).get()
+                    .then(snapshot => {
+                        snapshot.forEach(doc => {
+                            console.log(doc.id, '=>', doc.data());
+                            res.send({
+                                quote: doc.data().quote,
+                                id: doc.id
+                            });
+                            incrementAPICalls();
+                        });
+                    })
+                    .catch(err => {
+                        console.log('Error getting documents', err);
+                    });
+            }
+        })
+        .catch(err => {
+            console.log('Error getting documents', err);
+        });
 });
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 function incrementAPICalls() {
     var apiCalls = publicStats.get()
-    .then(doc => {
-        if (!doc.exists) {
-        console.log('No such document!');
-        } else {
-            publicStats.update({apiCalls: doc.data().apiCalls + 1});
-        }
-    })
-    .catch(err => {
-        console.log('Error getting document', err);
-    });
+        .then(doc => {
+            if (!doc.exists) {
+                console.log('No such document!');
+            } else {
+                publicStats.update({
+                    apiCalls: doc.data().apiCalls + 1
+                });
+            }
+        })
+        .catch(err => {
+            console.log('Error getting document', err);
+        });
 }
