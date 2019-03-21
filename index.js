@@ -12,7 +12,7 @@ function get() {
         document.getElementById("id").innerHTML = data.id;
 
         //tweet
-        var tweet = encodeURIComponent('"' + data.quote + '" -Kanye via https://kanye.rest');
+        var tweet = encodeURIComponent('"' + data.quote + '" -Kanye via https://kanye.rest @ajzbc');
         document.getElementById("tweet").href = "https://twitter.com/intent/tweet?text=" + tweet;
     }).catch(err => {
         console.log(err);
