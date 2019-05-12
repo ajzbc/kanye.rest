@@ -57,22 +57,6 @@
 
     <link rel="canonical" href="/" />
 
-    <!-- firebase -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-    <script>
-        // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAXH9Wz3DMgn1dLbdXnb-jry2skrA9AeHk",
-        authDomain: "kanyerestapi.firebaseapp.com",
-        databaseURL: "https://kanyerestapi.firebaseio.com",
-        projectId: "kanyerestapi",
-        storageBucket: "kanyerestapi.appspot.com",
-        messagingSenderId: "232778748525"
-    };
-    firebase.initializeApp(config);
-    </script> -->
-
     <script src="countUp.js"></script>
     <script src="index.js"></script>
 </head>
@@ -85,10 +69,6 @@
                 <h1>kanye.rest</h1>
             </a>
             <p class="description">a free json api for random kanye west quotes</p>
-
-            <!-- old github button 
-            <iframe src="https://ghbtns.com/github-btn.html?user=ajzbc&repo=kanye.rest&type=star&count=true&size=large"
-            frameborder="0" scrolling="0" width="140px" height="30px"></iframe> -->
             <a href="https://github.com/ajzbc/kanye.rest" target="_blank" rel="noopener noreferrer"><img
                     src="https://img.shields.io/github/stars/ajzbc/kanye.rest.svg?style=social"></a>
             <a href="https://www.producthunt.com/posts/kanye-rest-2" target="_blank" rel="noopener noreferrer"><img
@@ -109,7 +89,6 @@
                 <code class="response">
                         {
                         <div class="tab">"quote" : "<span id="quote"></span>"</div>
-                        <div class="tab">"id" : "<span id="id"></span>"</div>
                         }
                 </code>
             </pre>
@@ -117,38 +96,22 @@
 
         <section>
             <div id="codefund">
-                <!-- fallback content -->
             </div>
             <script src="https://codefund.app/properties/192/funder.js" async="async"></script>
         </section>
 
-        <section>
-            <h1>Extra</h1>
-            <pre>
-                <a class="getLink" title="@adafruit made a device that just shows quotes" href="https://twitter.com/adafruit/status/1103060423669149698">@adafruit made a device that just shows quotes</a>
-                <br><br>
-                <a class="getLink" title="kanye.rest-cli" href="https://www.npmjs.com/package/kanye.rest-cli">kanye.rest-cli</a>
-                <br><br>
-                Make something using kanye.rest?
-                <a href="https://github.com/ajzbc/kanye.rest/issues/new" class="getLink">Let me know</a>
-            </pre>
-        </section>
-        <section>
-            <h1>Suggest a quote</h1>
-            <div class="suggestion">
-                <input type="text" name="quote" id="newQuote"
-                    placeholder="Quote e.g. If I got any cooler I would freeze to death">
-                <input type="text" name="proof" id="newProof"
-                    placeholder="Proof e.g. https://twitter.com/kanyewest/status/1079833477808148480">
-                <button class="submitButton" onclick="submitSuggestion()" title="Submit">Submit</button>
-            </div>
-        </section>
         <footer>
-            <!-- <p>Total API Calls: <b id="apiCalls"></b></p> -->
+            <a class="footerButton extra" href="#">Project Showcase (Coming Soon)</a>
+            <a class="footerButton extra"
+                href="https://raw.githubusercontent.com/ajzbc/kanye.rest/master/quotes.json">Quote
+                List</a>
+        </footer>
+
+        <footer>
             <a class="footerButton" href="https://buymeacoff.ee/ajzbc">Buy Me A Coffee</a>
             <a class="footerButton" href="https://github.com/ajzbc/kanye.rest">GitHub</a>
             <a class="footerButton" href="https://ajzbc.com">Andrew Jazbec</a>
-            <a class="footerButton" href="https://twitter.com/ajzbc">Twitter</a>
+            <a class="footerButton" href="https://twitter.com/ajzbc">@ajzbc</a>
         </footer>
     </div>
 </body>

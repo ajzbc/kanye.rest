@@ -124,7 +124,6 @@ footer {
     background-color: #f8f8f8;
     font-family: monospace;
     font-size: 18px;
-    border: 1px solid #000;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
@@ -133,4 +132,8 @@ footer {
 .footerButton:hover {
     background-color: #000;
     color: #f8f8f8;
+}
+
+.extra {
+    border: 1px solid #000;
 }
