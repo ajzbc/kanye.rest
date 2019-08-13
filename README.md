@@ -25,6 +25,6 @@
  - `❯ wrangler generate kanye.rest https://github.com/ajzbc/kanye.rest`
 - `❯ wrangler preview`
 
-##License
+## License
 
 MIT
