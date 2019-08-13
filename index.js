@@ -1,4 +1,25 @@
-[
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+
+    const init = {
+        headers: {
+            'content-type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type",
+        },
+    }
+
+    const body = JSON.stringify({ quote: quotes[Math.floor(Math.random() * (quotes.length))] })
+
+    return new Response(body, init)
+
+}
+
+var quotes = [
     "I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle",
     "If I got any cooler I would freeze to death",
     "I wish I had a friend like me",

@@ -1,28 +1,17 @@
-<div align="center">
-  <img src="https://kanye.rest/images/logo.png" />
+# 👷 `worker-template` Hello World
 
-  <h1>kanye.rest</h1>
+A template for kick starting a Cloudflare worker project.
 
-  <b>a free json api for random kanye west quotes</b>
-</div>
+[`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
 
-<br />
+#### Wrangler
 
-## Usage
+To generate using [wrangler](https://github.com/cloudflare/wrangler)
 
-<pre><b>GET</b> https://api.kanye.rest</pre>
-
-```json
-{
-  "quote" : "I feel like I'm too busy writing history to read it."
-}
+```
+wrangler generate projectname https://github.com/cloudflare/worker-template
 ```
 
-## Development
+#### Serverless
 
-- `❯ npm install`
-- `❯ npm start`
-
-## License
-
-GNU General Public License
+To deploy using serverless add a [`serverless.yml`](https://serverless.com/framework/docs/providers/cloudflare/) file.
