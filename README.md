@@ -12,8 +12,7 @@
 
  ```json
 {
-  "quote" : "I feel like I'm too busy writing history to read it.",
-  "id": "fRSNsS7NQklhBRpN94z5"
+  "quote" : "I feel like I'm too busy writing history to read it."
 }
 ```
 
