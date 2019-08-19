@@ -9,4 +9,5 @@ worker/
 node_modules/
 .cargo-ok
 wrangler.toml
+package.json
 package-lock.json
