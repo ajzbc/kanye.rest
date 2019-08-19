@@ -1,4 +1,5 @@
 addEventListener("fetch", async event => {
+
     const { request } = event;
     const { url, method } = request;
 
