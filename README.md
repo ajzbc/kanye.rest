@@ -1,8 +1,6 @@
-<div align="center">
-  <img src="https://kanye.rest/images/logo.png" />
-  <h1>kanye.rest</h1>
-  <b>a free json api for random kanye west quotes</b>
-</div>
+
+  <h1>🌊 kanye.rest</h1>
+  <b>A free REST API for random Kanye West quotes (Kanye as a Service)</b>
 
  <br />
 
