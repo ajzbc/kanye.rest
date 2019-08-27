@@ -1,0 +1,121 @@
+html {
+    padding-left: calc(100vw - 100%);
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--color-primary);
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.nav #themeToggle {
+    margin-top: 0.4em;
+    cursor: pointer;
+}
+
+.nav a {
+    padding-bottom: 0px !important;
+}
+
+.inner {
+    padding: 1em;
+}
+
+.section {
+    padding: 1em;
+    font-size: 1.1em;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.title {
+    margin: 0;
+    margin-left: 0.3em !important;
+    margin-bottom: 0.2em;
+}
+
+.button {
+    font-size: 1.15em !important;
+    font-weight: 700;
+}
+
+.demo {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.demo a {
+    text-decoration: underline;
+}
+
+.extra {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 1.5em;
+}
+
+.extra a {
+    text-decoration: underline;
+}
+
+.no-top {
+    padding-top: 0 !important;
+}
+
+.tab {
+    margin-left: 2em;
+}
+
+#quote {
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.wavy {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.notfound {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* https://stackoverflow.com/a/4407335 */
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
