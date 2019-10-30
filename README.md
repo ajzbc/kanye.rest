@@ -21,7 +21,7 @@
  - Install [Wrangler](https://github.com/cloudflare/wrangler) to build
 
  To run locally without changes:
- - `❯ wrangler generate kanye.rest https://github.com/ajzbc/kanye.rest`
+ - `❯ wrangler generate kanyerest https://github.com/ajzbc/kanye.rest` (Cloudflare Workers do not allow punctuation)
  - `❯ wrangler preview`
 
  To make changes, fork and then:
