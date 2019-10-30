@@ -17,10 +17,19 @@
  ## Development
  Created using [Cloudflare Workers](https://workers.dev)
  <br />
- Install [Wrangler](https://github.com/cloudflare/wrangler) to build
+ - Create an account
+ - Install [Wrangler](https://github.com/cloudflare/wrangler) to build
 
+ To run locally without changes:
  - `❯ wrangler generate kanye.rest https://github.com/ajzbc/kanye.rest`
-- `❯ wrangler preview`
+ - `❯ wrangler preview`
+
+ To make changes, fork and then:
+ - `❯ git clone https://github.com/{username}/kanye.rest`
+ - `❯ cd kanye.rest`
+ - `❯ wrangler init kanyerest` (Cloudflare Workers do not allow punctuation)
+ - `❯ wrangler preview`
+
 
 ## License
 
