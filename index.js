@@ -3,55 +3,37 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
-    const responseType = await determineResponseFormat(request);
-
     const quote = randomQuote();
-    if (responseType == true) {
-        return new Response(JSON.stringify({ quote: randomQuote() }), {
+    const headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET',
+        'Access-Control-Allow-Headers': 'Content-Type'
+    };
+    if (shouldReturnJson(request)) {
+        return new Response(JSON.stringify({ quote }), {
             headers: {
-                'content-type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET',
-                'Access-Control-Allow-Headers': 'Content-Type',
+                ...headers,
+                'Content-Type': 'application/json'
             }
-        })
-    } else if (responseType == false) {
-        return new Response(quote, {
-            headers: {
-                'content-type': 'text/plain',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET',
-                'Access-Control-Allow-Headers': 'Content-Type',
-            }
-        })
+        });
     }
-    else {
-        return new Response('Error: 500', { status: 500 })
-    }
+    return new Response(quote, {
+        headers: {
+            ...headers,
+            'Content-Type': 'text/plain'
+        }
+    });
 }
 
-//todo rewrite this
-async function determineResponseFormat(request) {
-    const url_string = new URL(request.url);
-    var format = null;
-    if (url_string.searchParams.get("format")) {
-        format = url_string.searchParams.get("format").toLocaleLowerCase().split("/")[0];
+function shouldReturnJson(request) {
+    const url = new URL(request.url);
+    let format = null;
+    if (url.searchParams.get("format")) {
+        format = url.searchParams.get("format").toLocaleLowerCase().split("/")[0];
     }
     const accept = request.headers.get('Accept');
 
-    if (format == null && accept == null) {
-        return true;
-    } else if (format == 'json') {
-        return true;
-    } else if (format == 'text') {
-        return false;
-    } else if (accept == 'application/json') {
-        return true;
-    } else if (accept == 'text/plain') {
-        return false;
-    } else {
-        return true;
-    }
+    return (format !== 'text' && accept !== 'text/plain');
 }
 
 function randomQuote() {
