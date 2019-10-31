@@ -121,4 +121,5 @@ const quotes = [
     "We came into a broken world. And we're the cleanup crew.",
     "You can't look at a glass half full or empty if it's overflowing.",
     "I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle",
+    "Ima fix wolves",
 ]
