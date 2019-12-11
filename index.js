@@ -3,30 +3,39 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
-    const responseType = await determineResponseFormat(request);
-
-    const quote = randomQuote();
-    if (responseType == true) {
-        return new Response(JSON.stringify({ quote: randomQuote() }), {
-            headers: {
-                'content-type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET',
-                'Access-Control-Allow-Headers': 'Content-Type',
-            }
-        })
-    } else if (responseType == false) {
-        return new Response(quote, {
-            headers: {
-                'content-type': 'text/plain',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET',
-                'Access-Control-Allow-Headers': 'Content-Type',
-            }
-        })
-    }
-    else {
-        return new Response('Error: 500', { status: 500 })
+    try {
+        let url = new URL(request.url);
+        if (url.protocol === "http:") {
+            url.protocol = "https:";
+            return Response.redirect(url, 301);
+        }
+        const responseType = await determineResponseFormat(request);
+    
+        const quote = randomQuote();
+        if (responseType == true) {
+            return new Response(JSON.stringify({ quote: randomQuote() }), {
+                headers: {
+                    'content-type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                }
+            })
+        } else if (responseType == false) {
+            return new Response(quote, {
+                headers: {
+                    'content-type': 'text/plain',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                }
+            })
+        }
+        else {
+            return new Response('Malformed request', { status: 400 })
+        }
+    } catch (e) {
+        return new Response('An unexpected error ocurred', { status: 500 })
     }
 }
 
