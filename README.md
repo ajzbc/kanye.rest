@@ -22,13 +22,13 @@
 
  To run locally without changes:
  - `❯ wrangler generate kanyerest https://github.com/ajzbc/kanye.rest` (Cloudflare Workers do not allow punctuation)
- - `❯ wrangler preview`
+ - `❯ wrangler preview --watch`
 
  To make changes, fork and then:
  - `❯ git clone https://github.com/{username}/kanye.rest`
  - `❯ cd kanye.rest`
  - `❯ wrangler init kanyerest` (Cloudflare Workers do not allow punctuation)
- - `❯ wrangler preview`
+ - `❯ wrangler preview --watch`
 
 
 ## License
