@@ -30,6 +30,8 @@
  - `❯ wrangler init kanyerest` (Cloudflare Workers do not allow punctuation)
  - `❯ wrangler preview --watch`
 
+## Todo
+- Cache quotes.json on Cloudflare Edge
 
 ## License
 
