@@ -28,7 +28,7 @@ async function handleRequest(request) {
 		const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 		if (formatParameter !== 'text' && acceptHeader !== 'text/plain') {
-			return new Response(JSON.stringify({ quote: randomQuote }), {
+			return new Response(JSON.stringify({ quote: randomQuote, response_type: "in_channel" }), {
 				headers: {
 					...headers,
 					'Content-Type': 'application/json'
