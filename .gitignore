@@ -1,9 +1,9 @@
 /target
+/dist
 **/*.rs.bk
 Cargo.lock
 bin/
 pkg/
-dist/
 wasm-pack.log
 worker/
 node_modules/
