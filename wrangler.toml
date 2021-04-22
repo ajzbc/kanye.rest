@@ -1,0 +1,12 @@
+name = "kanye-rest-dev"
+type = "webpack"
+
+account_id = ""
+zone_id = ""
+
+workers_dev = true
+
+[env.production]
+name = "kanye-rest"
+workers_dev = false
+route = "api.kanye.rest/*"
