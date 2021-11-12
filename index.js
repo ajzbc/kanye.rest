@@ -10,10 +10,13 @@ async function handleRequest(request) {
     try {
         const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
-        const json = JSON.stringify({ quote: quote });
+        const text = new URL(request.url).searchParams.get("format") === "text"
 
-        return new Response(json, {
-            headers: { ...headers, "content-type": "application/json" },
+        return new Response(text ? quote : JSON.stringify({ quote: quote }), {
+            headers: {
+                ...headers,
+                "content-type": text ? "text/plain" : "application/json"
+            },
         });
     } catch (error) {
         return new Response("An unexpected error ocurred", {
