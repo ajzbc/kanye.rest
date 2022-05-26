@@ -1,4 +1,4 @@
-const quotes = require("./quotes.json");
+import quotes from "./quotes.json";
 
 const headers = {
     "Access-Control-Allow-Origin": "*",
@@ -6,23 +6,27 @@ const headers = {
     "Access-Control-Allow-Headers": "Content-Type",
 };
 
-async function handleRequest(request) {
-    try {
-        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+export default {
+    fetch(request) {
+        try {
+            const random_quote = quotes[Math.floor(Math.random() * quotes.length)];
 
-        const json = JSON.stringify({ quote: quote });
-
-        return new Response(json, {
-            headers: { ...headers, "content-type": "application/json" },
-        });
-    } catch (error) {
-        return new Response("An unexpected error ocurred", {
-            status: 500,
-            headers: { ...headers },
-        });
-    }
-}
-
-addEventListener("fetch", (event) => {
-    event.respondWith(handleRequest(event.request));
-});
+            const url = new URL(request.url);
+            switch (url.pathname) {
+                case "/text":
+                    return new Response(random_quote, {
+                        headers: { ...headers, "content-type": "text/plain" },
+                    });
+                default:
+                    return new Response(JSON.stringify({ quote: random_quote }), {
+                        headers: { ...headers, "content-type": "application/json" },
+                    });
+            }
+        } catch (error) {
+            return new Response(error.toString(), {
+                status: 500,
+                headers: { ...headers },
+            });
+        }
+    },
+};

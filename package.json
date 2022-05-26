@@ -1,8 +1,14 @@
 {
     "name": "kanye-rest",
-    "version": "1.0.0",
-    "description": "A free REST API for random Kanye West quotes (Kanye as a Service)",
-    "main": "index.js",
+    "version": "2.0.0",
     "author": "Andrew Jazbec",
-    "license": "MIT"
+    "description": "A free REST API for random Kanye West quotes (Kanye as a Service)",
+    "license": "MIT",
+    "scripts": {
+        "start": "wrangler dev",
+        "publish": "wrangler publish"
+    },
+    "devDependencies": {
+        "wrangler": "2.0.6"
+    }
 }
