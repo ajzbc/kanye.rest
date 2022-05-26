@@ -6,9 +6,7 @@ Built with [Cloudflare Workers](https://workers.cloudflare.com/).
 
 ## Usage
 
-```shell
-$ curl api.kanye.rest
-```
+### `GET` [https://api.kanye.rest](https://api.kanye.rest)
 
 ```json
 {
@@ -18,9 +16,7 @@ $ curl api.kanye.rest
 
 or
 
-```shell
-$ curl api.kanye.rest/text
-```
+### `GET` [https://api.kanye.rest/text](https://api.kanye.rest/text)
 
 ```text
 The world is our office
