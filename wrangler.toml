@@ -1,7 +1,10 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "kanye-rest"
-workers_dev = false
 main = "src/index.ts"
+
 compatibility_date = "2024-05-29"
 compatibility_flags = ["nodejs_compat"]
+
+workers_dev = false
+logpush = true
 route = "api.kanye.rest/*"
