@@ -1,14 +1,23 @@
 {
-    "name": "kanye-rest",
-    "version": "2.0.0",
-    "author": "Andrew Jazbec",
-    "description": "A free REST API for random Kanye West quotes (Kanye as a Service)",
-    "license": "MIT",
-    "scripts": {
-        "start": "wrangler dev",
-        "publish": "wrangler publish"
-    },
-    "devDependencies": {
-        "wrangler": "2.0.6"
-    }
+  "name": "kanye-rest",
+  "version": "2.0.0",
+  "author": "Andrew Jazbec",
+  "description": "A free REST API for random Kanye West quotes (Kanye as a Service)",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.1.0",
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "typescript": "^5.0.4",
+    "vitest": "1.3.0",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.4.2"
+  }
 }
