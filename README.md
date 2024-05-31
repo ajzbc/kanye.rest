@@ -10,11 +10,9 @@ Built with [Cloudflare Workers](https://workers.cloudflare.com/).
 
 ```json
 {
-    "quote": "I feel like I'm too busy writing history to read it."
+  "quote": "I feel like I'm too busy writing history to read it."
 }
 ```
-
-or
 
 ### `GET` [https://api.kanye.rest/text](https://api.kanye.rest/text)
 
@@ -22,12 +20,21 @@ or
 The world is our office
 ```
 
+### `GET` [https://api.kanye.rest/quotes](https://api.kanye.rest/quotes)
+
+```json
+[
+    ...,
+    "I leave my emojis bart Simpson color",
+    "I love sleep; it's my favorite.",
+    ...,
+]
+```
+
 ## Development
 
-Install [Wrangler](https://developers.cloudflare.com/workers/wrangler/get-started/#installation)
-
 ```shell
-npx wrangler dev
+pnpm dev
 ```
 
 ## License
