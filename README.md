@@ -22,7 +22,10 @@ The world is our office
 
 ### `GET` [https://api.kanye.rest/quotes](https://api.kanye.rest/quotes)
 
-```json
+> [!WARNING]  
+> This response format may change.
+
+```ts
 [
     ...,
     "I leave my emojis bart Simpson color",
