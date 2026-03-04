@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       hono:
-        specifier: ^4.4.2
-        version: 4.4.2
+        specifier: ^4.12.4
+        version: 4.12.4
     devDependencies:
       '@cloudflare/vitest-pool-workers':
         specifier: ^0.1.0
@@ -684,15 +684,15 @@ packages:
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.4.2:
-    resolution: {integrity: sha512-bRhZ+BM9r04lRN2i9wiZ18yQNbZxHsmmRIItoAb43nRkHnIDsFhFh4mJ0seEs06FvenibpAgSVNHQ8ZzcDQx2A==}
-    engines: {node: '>=16.0.0'}
+  hono@4.12.4:
+    resolution: {integrity: sha512-ooiZW1Xy8rQ4oELQ++otI2T9DsKpV0M6c6cO6JGx4RTfav9poFFLlet9UMXHZnoM1yG0HWGlQLswBGX3RZmHtg==}
+    engines: {node: '>=16.9.0'}
 
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
@@ -1636,7 +1636,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.4.2: {}
+  hono@4.12.4: {}
 
   human-signals@5.0.0: {}
 
